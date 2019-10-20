@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SPA</title>
+    <script src="./js/app.js"></script>
+    <script src="./page-detail/page-detail.js"></script>
+    <script type="text/javascript">
+      let pages = [
+          {
+            url: "/details",
+            resource: "/page-detail/page-detail.html",
+            klasse: PageDetail
+          },
+          {
+            url: "/about",
+            resource: "/page-about/page-about.html"
+            //,klasse: PageAbout
+          }
+        ];
+
+      window.addEventListener("load", function () {
+        let app = new App(pages);
+        app.run();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="content">
+      <h1>Hallo! Das ist eine Übersicht</h1>
+      <ul>
+        <li>
+          <a href="#">Übersicht</a>
+        </li>
+        <li>
+          <a href="#/details">Details</a>
+        </li>
+        <li>
+          <a href="#/about">Über uns</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
